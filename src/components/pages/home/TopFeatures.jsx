@@ -1,5 +1,7 @@
 import React from 'react'
 import images from '../../../images'
+import SectionTitle from '../../ui/SectionTitle'
+import Card from '../../ui/Card'
 
 export const TopFeatures = () => {
     const features1 = [
@@ -32,44 +34,34 @@ export const TopFeatures = () => {
         }
     ]
   return (
-    <div className='relative max-w-7xl mx-auto mt-25 p-10 md:p-0'>
-        <div className="flex flex-wrap justify-between items-center mb-10">
-           <div>
-            <p className='subtitle text-white border border-gray-600 w-fit ps-1 py-2 pe-4 rounded-full '>
-                <span><i className="fa-regular fa-star"></i></span>
-                Top Features 
-                </p>
-            <h3 className='text-white text-3xl md:text-5xl my-3'>More Than AI</h3>
-           </div>
-           <p className='text-white'>Discover the cutting-edge capabilities of our AI solutions  <br />
-                designed to transform your business operations.
-            </p>
-        </div>
-
-
-        <h1 className='text-white/40 text-5xl md:text-9xl  font-bold text-center uppercase opacity-20 absolute inset-0 '>features</h1>
-
+    <div className='relative max-w-7xl mx-auto mt-25 p-10 lg:p-0 bg-gradient-to-tb from-bg-black to-white'>
+        <SectionTitle
+            title="Top Features"
+            subtTitle="More Than AI"
+            text="Step into the future with AI, engineered to tackle the most complex challenges."
+            bgText="Features"
+        />
         <div className="grid md:grid-cols-3 gap-10 mb-10">
-            {
-                features1.map((feature, index) => (
-                    <div key={index} className="subtitle p-2  rounded-lg border border-gray-700 hover:scale-105 transition-transform duration-300">
-                        <img src={feature.img} alt={feature.title} className="mb-4 border border-gray-300/30 w-full" loading="lazy"/>
+            {features1.map((feature, index) => (
+                <Card key={index} >
+                    <img src={feature.img} alt={feature.title} className="mb-4 rounded-xl border border-gray-300/30 w-full" loading="lazy"/>
+                    <div className="p-3">
                         <p className="text-white  font-semibold mb-2">{feature.title}</p>
                         <p className="text-gray-300">{feature.text}</p>
                     </div>
-                ))
-            }
+                </Card>
+                ))}
         </div>
         <div className="grid md:grid-cols-2 gap-10">
-            {
-                features2.map((feature, index) => (
-                    <div key={index} className="subtitle rounded-lg p-2 border border-gray-700 hover:scale-105 transition-transform duration-300">
-                        <img src={feature.img} alt={feature.title} className="mb-4 border border-gray-300/30 w-full" loading="lazy"/>
+            {features2.map((feature, index) => (
+                <Card key={index} >
+                    <img src={feature.img} alt={feature.title} className="mb-4 rounded-xl border border-gray-300/30 w-full" loading="lazy"/>
+                    <div className="p-3">
                         <p className="text-white  font-semibold mb-2">{feature.title}</p>
                         <p className="text-gray-300">{feature.text}</p>
                     </div>
-                ))
-            }
+                </Card>
+            ))}
         </div>
 
     </div>

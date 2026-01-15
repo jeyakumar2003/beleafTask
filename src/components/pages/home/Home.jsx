@@ -6,6 +6,12 @@ import { HomeBenifit } from './HomeBenifit'
 import { TopFeatures } from './TopFeatures'
 import { HomeApps } from './HomeApps'
 import { HomeIntergation } from './HomeIntergation'
+import MobileApps from './MobileApps'
+import Testimonial from './Testimonial'
+import Faqs from './Faqs'
+import Plans from './plans'
+import NewsLetter from './NewsLetter'
+
 
 export const Home = () => {
   return (
@@ -17,6 +23,11 @@ export const Home = () => {
       <TopFeatures/>
       <HomeApps/>
       <HomeIntergation/>
+      <MobileApps/>
+      <Testimonial/>
+      <Plans/>
+      <Faqs/>
+      <NewsLetter/>
     </div>
   )
 }

@@ -14,21 +14,21 @@ export const Header = () => {
   ];
 
   return (
-    <header className=" p-4 z-50">
-      <nav className="flex justify-between items-center max-w-4xl mx-auto border border-white p-2 rounded-xl bg-white/10 backdrop-blur-xl">
+    <header className="w-full lg:w-fit mx-5 mx-auto border border-white/50 mt-10 rounded-xl bg-white/10 backdrop-blur-xl shadow-lg p-3 lg:p-1 z-50">
+      <nav className="flex justify-between items-center ">
         
         {/* Logo */}
-        <img className="w-12 h-12" src={images.logo} alt="Logo" />
+        <img className="w-12 h-12 me-5" src={images.logo} alt="Logo" />
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-6">
+        <ul className="hidden lg:flex items-center space-x-6">
           {menu.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.link}
                 className={({ isActive }) =>
-                  `relative text-white px-4 py-2 rounded-lg transition-all duration-300
-                  ${isActive ? 'bg-white/40 font-semibold' : 'hover:bg-white/20'}`
+                  `relative text-white px-4 py-3  rounded-lg transition-all duration-300
+                  ${isActive ? 'bg-white/10 font-semibold shadow-md' : 'hover:bg-white/20'}`
                 }
               >
                 {item.name}
@@ -38,14 +38,14 @@ export const Header = () => {
         </ul>
 
         {/* Desktop Button */}
-        <button className="hidden md:flex bg-black/70 text-white border border-white px-4 py-2 rounded-lg items-center gap-2">
-          <span>Get Template</span>
+        <button className="hidden lg:flex bg-black/30 p-2 text-white border border-white/20  rounded-lg items-center gap-2">
+          <span >Get Template</span>
           <img src={images.arrow} alt="Arrow icon" />
         </button>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -55,7 +55,7 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden mt-2 max-w-4xl mx-auto rounded-xl bg-white/10 backdrop-blur-xl border border-white">
+        <div className="lg:hidden mt-2 max-w-4xl mx-auto rounded-xl bg-white/10 backdrop-blur-xl border border-white mx-10 lg:mx-auto">
           <ul className="flex flex-col p-4 space-y-3">
             {menu.map((item, index) => (
               <li key={index}>
@@ -72,7 +72,7 @@ export const Header = () => {
               </li>
             ))}
 
-            <button className="bg-black/70 text-white border border-white px-4 py-2 rounded-lg flex items-center justify-center gap-2">
+            <button className="bg-black/20 text-white border border-white-20 px-4 py-2 rounded-lg flex items-center justify-center gap-2">
               <span>Get Template</span>
               <img src={images.arrow} alt="Arrow icon" />
             </button>

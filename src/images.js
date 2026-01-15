@@ -44,6 +44,43 @@ import desktop from './assets/images/desktop.png';
 import fill1 from './assets/images/fill1.png';
 import fill2 from './assets/images/fill2.png';
 
+
+
+
+import intlogo1 from './assets/images/intlogo1.png'
+import intlogo2 from './assets/images/intlogo2.png'
+import intlogo3 from './assets/images/intlogo3.png'
+import intlogo4 from './assets/images/intlogo4.png'
+import intlogo5 from './assets/images/intlogo5.png'
+import intlogo6 from './assets/images/intlogo6.png'
+
+import intsvg1 from './assets/images/intsvg1.png'
+import intsvg2 from './assets/images/intsvg2.png'
+
+
+import mob1 from './assets/images/mob1.png'
+import mob2 from './assets/images/mob2.png'
+import mob3 from './assets/images/mob3.png'
+import mob4 from './assets/images/mob4.png'
+
+
+import mob6 from './assets/images/mob6.png'
+import mob7 from './assets/images/mob7.png'
+
+import mob8 from './assets/images/mob8.png'
+
+import xapp from './assets/images/xapp.png'
+
+
+import plan1 from './assets/images/plan1.png'
+import plan2 from './assets/images/plan2.png'
+import plan3 from './assets/images/plan3.png'
+import planPoints from './assets/images/planPoints.png'
+
+import newsletter from './assets/images/newsletter.png'
+
+import testBlur from './assets/images/testBlur.png'
+
 const images = {
     fill1,
     fill2,
@@ -51,6 +88,7 @@ const images = {
     logo,
     arrow,
     blur,
+    testBlur,
     feature1,
     feature2,
     feature3,
@@ -83,6 +121,31 @@ const images = {
     top5,
     phone,
     desktop,
+
+    intlogo1,
+    intlogo2,
+    intlogo3,
+    intlogo4,
+    intlogo5,
+    intlogo6,
+    intsvg1,
+    intsvg2,
+
+    mob1,
+    mob2,
+    mob3,
+    mob4,
+    mob6,
+    mob7,
+    mob8,
+    xapp,
+
+    plan1,
+    plan2,
+    plan3,
+    planPoints,
+
+    newsletter
 };
 
 export default images;
